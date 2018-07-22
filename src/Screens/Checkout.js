@@ -84,7 +84,10 @@ class Checkout extends Component {
            
           
             <View style={styles.wrapper}>
+
              <Text style={{color:"#eee"}}>{pro_id = item.id}</Text>
+             <ScrollView keyboardShouldPersistTaps='handled'>
+
         <View style={styles.container2}>
             
             
@@ -97,7 +100,9 @@ class Checkout extends Component {
     returnKeyType="next"
     underlineColorAndroid='rgba(0,0,0,0)'
     selectionColor={'black'}
-    numberOfLines={1}/>
+    numberOfLines={1}
+    blurOnSubmit={false}
+    />
     
     <TextInput style={{height:45,width:'48%',backgroundColor:'#fff',paddingLeft:5}}
     placeholder="Last Name"
@@ -106,7 +111,9 @@ class Checkout extends Component {
     returnKeyType="next"
     underlineColorAndroid='rgba(0,0,0,0)'
     selectionColor={'black'}
-    numberOfLines={1}/>
+    numberOfLines={1}
+    blurOnSubmit={false}
+    />
   </View>
 
    
@@ -118,7 +125,9 @@ class Checkout extends Component {
         returnKeyType="next"
         underlineColorAndroid='rgba(0,0,0,0)'
         selectionColor={'black'}
-        numberOfLines={1}/>
+        numberOfLines={1}
+        blurOnSubmit={false}
+        />
     </View>
     <View style={styles.container2}>
         <TextInput style={{ height:45,width:'48%',backgroundColor:'#fff',paddingLeft:5}}
@@ -128,7 +137,10 @@ class Checkout extends Component {
         returnKeyType="next"
         underlineColorAndroid='rgba(0,0,0,0)'
         selectionColor={'black'}
-        numberOfLines={1}/>
+        blurOnSubmit={false}
+        numberOfLines={1}
+        keyboardType={'numeric'}
+        />
         <TextInput style={{height:45,width:'48%',backgroundColor:'#fff',paddingLeft:5}}
         placeholder="phone"
         value={this.state.phone}
@@ -136,6 +148,7 @@ class Checkout extends Component {
         returnKeyType="next"
         underlineColorAndroid='rgba(0,0,0,0)'
         selectionColor={'black'}
+        keyboardType={'numeric'}
         numberOfLines={1}/>  
     
     </View>
@@ -143,10 +156,12 @@ class Checkout extends Component {
     <TextInput style={{height:45,width:'100%',backgroundColor:'#fff',paddingLeft:5}}
         placeholder="email"
         value={this.state.email}
+        keyboardType={'email-address'}
         onChangeText={email => this.setState({email})}
         returnKeyType="next"
         underlineColorAndroid='rgba(0,0,0,0)'
         selectionColor={'black'}
+        blurOnSubmit={false}
         numberOfLines={1}/>
     
          
@@ -161,7 +176,8 @@ class Checkout extends Component {
     <Text style={{color: "#fff",textAlign:'center',paddingTop:15}}> Place Order </Text>
     </TouchableOpacity> 
     </View>
-                    
+                    </ScrollView>
+
                     </View>
 
                      }
