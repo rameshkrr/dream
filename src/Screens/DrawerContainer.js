@@ -28,16 +28,7 @@ export default class DrawerContainer extends React.Component {
           style={styles.transparentButton}>
           Cart
         </Text>
-        <Text
-          onPress={() => navigation.navigate('Checkout')}
-          style={styles.transparentButton}>
-          Checkout
-        </Text>
-        <Text
-          onPress={() => navigation.navigate('Success')}
-          style={styles.transparentButton}>
-          Success
-        </Text>
+        
         
       </View>
       </Content>
